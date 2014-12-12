@@ -36,7 +36,7 @@ IEnumerable<Device> devices = connect.Probe().Select(entry => entry.Value);
 ```
 
 
-### Get the results for a stream
+### Get the results for a device in a stream
 
 This example get all results for a device named "TestDevice" within the stream.
 
