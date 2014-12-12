@@ -4,7 +4,9 @@ MTSharp
 .Net library for comsuming MTConnect streams written in pure C#.
 
 This library utilizes Linq and Xml.Linq to simplify and speed up the parsing of streams.
-Dictionary<string, Device> Probe()
+
+The structure was taken mostly from https://github.com/mtconnect/mtlinq but cleaned up and optimized
+to have ~30% gain in performance.
 
 
 MTConnect.Probe()
@@ -34,12 +36,11 @@ IEnumerable<Device> devices = connect.Probe().Select(entry => entry.Value);
 ```
 
 
-### Get all results for a device named "TestDevice" within the stream
+### Get the results for a stream
 
-MTConnect.Current returns Dictionary<string, IEnumerable<Result>>, so instead of using the indexer
-you can use a Where Linq statement to make sure that if it does not exist you do not get an exception.
+This example get all results for a device named "TestDevice" within the stream.
 
 ```C#
 MTConnect connect = new MTConnect("http://url-to-stream");
-IEnumerable<Result> results = connect.Current().Where(r => r.Key == "TestDevice");
+IEnumerable<Result> results = connect.Current()["TestDevice"];
 ```
