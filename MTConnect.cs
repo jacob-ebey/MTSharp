@@ -6,16 +6,26 @@ using System.Collections;
 
 namespace MTSharp
 {
+    /// <summary>
+    /// Represents a MTConnect stream
+    /// </summary>
     public class MTConnect
     {
         string uri;
         Dictionary<string, Device> devices;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MTSharp.MTConnect"/> class.
+        /// </summary>
+        /// <param name="uri">URI.</param>
         public MTConnect(string uri)
         {
             this.uri = uri;
         }
 
+        /// <summary>
+        /// Probe this instance for devices.
+        /// </summary>
         public Dictionary<string, Device> Probe()
         {
             XElement root = XElement.Load(uri);
@@ -29,12 +39,18 @@ namespace MTSharp
             return this.devices;
         }
 
+        /// <summary>
+        /// Get all devices.
+        /// </summary>
         public Dictionary<string, Device> Devices()
         {
             if (devices == null) Probe();
             return devices;
         }
 
+        /// <summary>
+        /// Get the current data from the stream.
+        /// </summary>
         public Dictionary<string, IEnumerable<Result>> Current()
         {
             if (this.devices == null) Probe();
