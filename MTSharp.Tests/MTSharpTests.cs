@@ -19,7 +19,12 @@ namespace MTSharp.Tests
             Sample result = results.FirstOrDefault(r =>
             {
                 Sample sample = r as Sample;
-                return sample?.DataItem?.Name == "Sspeed";
+
+                if (sample == null) return false;
+
+                if (sample.DataItem == null) return false;
+
+                return sample.DataItem.Name == "Sspeed";
             }) as Sample;
 
             if (result == null) Assert.Fail();
