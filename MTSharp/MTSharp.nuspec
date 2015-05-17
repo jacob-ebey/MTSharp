@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MTSharp</id>
+    <version>$version$</version>
+    <title>MTSharp</title>
+    <authors>Jacob Ebey</authors>
+    <owners>Jacob Ebey</owners>
+    <projectUrl>https://github.com/jacob-ebey/MTSharp</projectUrl>
+    <iconUrl>http://faviconist.com/icons/8af52be04d43793b14c84a6bc19c52f6/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.Net library for comsuming MTConnect streams written in pure C#.</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>Library MTConnect MTSharp Sharp MT</tags>
+  </metadata>
+</package>
