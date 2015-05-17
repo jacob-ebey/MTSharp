@@ -1,4 +1,4 @@
-MTSharp
+MTSharp [![Build status](https://ci.appveyor.com/api/projects/status/0h6bt5q5lathg9kp/branch/master?svg=true)](https://ci.appveyor.com/project/jacob-ebey/mtsharp/branch/master)
 =======
 
 .Net library for comsuming MTConnect streams written in pure C#.
@@ -8,6 +8,7 @@ This library utilizes Linq and Xml.Linq to simplify and speed up the parsing of 
 The structure was taken mostly from https://github.com/mtconnect/mtlinq but cleaned up and optimized
 to have ~30% gain in performance.
 
+MTSharp is avaliable on NuGet at (https://www.nuget.org/packages/MTSharp/)[https://www.nuget.org/packages/MTSharp/].
 
 MTConnect.Probe()
 -----------------
