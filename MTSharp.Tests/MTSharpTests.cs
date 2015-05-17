@@ -19,9 +19,6 @@ namespace MTSharp.Tests
             Sample result = results.FirstOrDefault(r =>
             {
                 Sample sample = r as Sample;
-
-                if (sample == null) return false;
-
                 return sample?.DataItem?.Name == "Sspeed";
             }) as Sample;
 
