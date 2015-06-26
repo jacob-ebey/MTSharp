@@ -8,7 +8,7 @@ This library utilizes Linq and Xml.Linq to simplify and speed up the parsing of 
 The structure was taken mostly from https://github.com/mtconnect/mtlinq but cleaned up and optimized
 to have ~30% gain in performance.
 
-MTSharp is avaliable on NuGet at (https://www.nuget.org/packages/MTSharp/)[https://www.nuget.org/packages/MTSharp/].
+MTSharp is avaliable on NuGet at [https://www.nuget.org/packages/MTSharp/](https://www.nuget.org/packages/MTSharp/).
 
 MTConnect.Probe()
 -----------------
